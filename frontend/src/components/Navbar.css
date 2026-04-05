@@ -1,0 +1,41 @@
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10,10,15,0.95); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border); height: 64px;
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 20px;
+  height: 100%; display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 8px;
+  text-decoration: none; color: var(--text); font-family: 'Syne', sans-serif; font-size: 1rem;
+}
+.logo-icon { font-size: 1.4rem; }
+.nav-logo strong { color: var(--accent); }
+.nav-links { display: flex; align-items: center; gap: 6px; }
+.nav-links a {
+  text-decoration: none; color: var(--text2); padding: 8px 12px;
+  border-radius: 8px; font-size: 14px; transition: all 0.2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--text); background: var(--surface2); }
+.notif-link { position: relative; }
+.notif-badge {
+  position: absolute; top: 2px; right: 2px;
+  background: var(--accent2); color: white; font-size: 10px;
+  min-width: 16px; height: 16px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-weight: 700;
+}
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; }
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .nav-links {
+    display: none; position: absolute; top: 64px; left: 0; right: 0;
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    flex-direction: column; padding: 16px; gap: 4px;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { width: 100%; }
+}

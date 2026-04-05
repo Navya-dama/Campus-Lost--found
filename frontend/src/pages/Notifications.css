@@ -1,0 +1,13 @@
+.notif-page { max-width: 700px; margin: 0 auto; padding: 30px 0 60px; }
+.notif-list { display: flex; flex-direction: column; gap: 10px; }
+.notif-item { display: flex; align-items: flex-start; gap: 14px; padding: 16px; transition: all 0.2s; }
+.notif-item.unread { border-color: rgba(108,99,255,0.4); background: rgba(108,99,255,0.05); }
+.notif-item.clickable { cursor: pointer; }
+.notif-item.clickable:hover { border-color: var(--accent); transform: translateY(-1px); }
+.notif-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+.notif-content { flex: 1; }
+.notif-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px; margin-bottom: 4px; }
+.notif-msg { font-size: 13px; color: var(--text2); line-height: 1.5; margin-bottom: 6px; }
+.notif-time { font-size: 12px; color: var(--text2); }
+.notif-cta { color: var(--accent); font-weight: 600; }
+.unread-dot { width: 10px; height: 10px; background: var(--accent); border-radius: 50%; flex-shrink: 0; margin-top: 4px; }

@@ -1,0 +1,15 @@
+.post-page { max-width: 700px; margin: 0 auto; padding: 30px 0 60px; }
+.post-form { padding: 32px; }
+.type-toggle { display: flex; gap: 10px; margin-bottom: 28px; }
+.type-btn { flex: 1; padding: 14px; border-radius: var(--radius); border: 2px solid var(--border); background: var(--surface2); color: var(--text2); cursor: pointer; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px; transition: all 0.2s; }
+.type-btn.active-lost { border-color: var(--lost); color: var(--lost); background: rgba(255,101,132,0.08); }
+.type-btn.active-found { border-color: var(--found); color: var(--found); background: rgba(67,233,123,0.08); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.image-upload { border: 2px dashed var(--border); border-radius: var(--radius); cursor: pointer; overflow: hidden; transition: border-color 0.2s; }
+.image-upload:hover { border-color: var(--accent); }
+.upload-placeholder { padding: 40px; text-align: center; color: var(--text2); }
+.upload-placeholder span { font-size: 36px; }
+.upload-placeholder p { margin-top: 8px; font-size: 14px; }
+.img-preview { width: 100%; max-height: 200px; object-fit: cover; display: block; }
+.form-actions { display: flex; gap: 12px; justify-content: flex-end; margin-top: 8px; }
+@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
