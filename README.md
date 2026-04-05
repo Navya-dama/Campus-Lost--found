@@ -89,16 +89,6 @@ npm install pg          # for PostgreSQL
 
 ---
 
-## 🤖 AI Matching
 
-Uses Anthropic Claude API (`claude-sonnet-4-20250514`).
-When you post a new item, the backend:
-1. Fetches all active items of the opposite type
-2. Sends them to Claude for similarity scoring
-3. Notifies both users if score ≥ 50%
-
-Set your `ANTHROPIC_API_KEY` in `backend/.env`.
-
----
 
 Built with ❤️ for campus communities.
