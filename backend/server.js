@@ -21,8 +21,11 @@ app.use('/api/items', itemRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/notifications', notificationRoutes);
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
-app.get('/', (req, res) => res.json({ message: 'Campus Lost & Found API running!' }));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
